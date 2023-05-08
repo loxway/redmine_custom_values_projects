@@ -20,9 +20,9 @@
 
 require 'redmine'
 
-require 'redmine_custom_values_projects/field_format_patch'
-require 'redmine_custom_values_projects/projects_helper_patch'
-require 'redmine_custom_values_projects/project_patch'
+require_relative 'lib/redmine_custom_values_projects/field_format_patch'
+require_relative 'lib/redmine_custom_values_projects/projects_helper_patch'
+require_relative 'lib/redmine_custom_values_projects/project_patch'
 
 Redmine::Plugin.register :redmine_custom_values_projects do
   name 'Custom values for projects'
