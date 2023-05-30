@@ -37,8 +37,8 @@ module RedmineCustomValuesProjects
   end
 end
 
-Rails.configuration.to_prepare do
+# Rails.configuration.to_prepare do
   unless Project.included_modules.include?(RedmineCustomValuesProjects::ProjectPatch)
     Project.send(:include, RedmineCustomValuesProjects::ProjectPatch)
   end
-end
+# end

@@ -40,8 +40,8 @@ module RedmineCustomValuesProjects
 end
 
 
-Rails.configuration.to_prepare do
+# Rails.configuration.to_prepare do
   unless ProjectsHelper.included_modules.include?(RedmineCustomValuesProjects::ProjectsHelperPatch)
     ProjectsHelper.send(:include, RedmineCustomValuesProjects::ProjectsHelperPatch)
   end
-end
+# end

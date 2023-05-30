@@ -82,8 +82,8 @@ module RedmineCustomValuesProjects
   end
 end
 
-Rails.configuration.to_prepare do
+# Rails.configuration.to_prepare do
   unless Redmine::FieldFormat::ListFormat.included_modules.include?(RedmineCustomValuesProjects::FieldFormatPatch)
     Redmine::FieldFormat::ListFormat.send(:include, RedmineCustomValuesProjects::FieldFormatPatch)
   end
-end
+# end
